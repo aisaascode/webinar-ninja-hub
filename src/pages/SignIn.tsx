@@ -26,19 +26,24 @@ const SignIn = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background p-4">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen flex items-center justify-center bg-background p-4 bg-purple-pattern">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="orb w-[500px] h-[500px] top-0 left-0 opacity-20" />
+        <div className="orb w-[400px] h-[400px] bottom-0 right-0 opacity-15" />
+      </div>
+      
+      <div className="w-full max-w-md relative z-10">
         <div className="text-center mb-8">
           <Link to="/" className="inline-block">
-            <h1 className="text-2xl font-bold text-gradient">
+            <h1 className="text-2xl font-bold text-gradient font-heading">
               Tensai<span className="text-foreground">Webinar</span>
             </h1>
           </Link>
-          <h2 className="text-2xl font-semibold mt-6 mb-2">Welcome back</h2>
+          <h2 className="text-2xl font-semibold mt-6 mb-2 font-heading">Welcome back</h2>
           <p className="text-muted-foreground">Sign in to your account to continue</p>
         </div>
         
-        <div className="bg-card rounded-lg p-8 border border-border/50 shadow-lg">
+        <div className="neo-glass rounded-lg p-8 shadow-lg">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <label htmlFor="email" className="text-sm font-medium">
@@ -115,7 +120,7 @@ const SignIn = () => {
                 <div className="w-full border-t border-border"></div>
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-card px-2 text-muted-foreground">
+                <span className="bg-card/60 backdrop-blur-lg px-2 text-muted-foreground">
                   Or continue with
                 </span>
               </div>

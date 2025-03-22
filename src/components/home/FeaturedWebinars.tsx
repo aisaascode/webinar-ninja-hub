@@ -48,7 +48,7 @@ const FeaturedWebinars = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div>
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-3xl font-bold mb-4 font-heading">
               Upcoming <span className="text-gradient">Webinars</span>
             </h2>
             <p className="text-muted-foreground max-w-lg">
@@ -79,9 +79,9 @@ const WebinarCard = ({ webinar }: { webinar: typeof webinars[number] }) => {
   };
   
   return (
-    <div className="bg-card rounded-lg overflow-hidden border border-border/50 card-hover group">
+    <div className="neo-glass rounded-lg overflow-hidden card-hover group">
       <div className="relative h-48 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent z-10" />
         <div className="absolute top-4 left-4 z-20">
           <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/20 text-primary">
             {webinar.category}
@@ -95,7 +95,7 @@ const WebinarCard = ({ webinar }: { webinar: typeof webinars[number] }) => {
       </div>
       
       <div className="p-6">
-        <h3 className="text-lg font-semibold line-clamp-2 mb-2 h-14">
+        <h3 className="text-lg font-semibold line-clamp-2 mb-2 h-14 font-heading">
           {webinar.title}
         </h3>
         
@@ -129,7 +129,7 @@ const WebinarCard = ({ webinar }: { webinar: typeof webinars[number] }) => {
         </div>
         
         <Link to={`/webinar/${webinar.id}`}>
-          <Button variant="default" className="w-full" ripple>
+          <Button variant="glow" className="w-full" ripple>
             Register Now
           </Button>
         </Link>

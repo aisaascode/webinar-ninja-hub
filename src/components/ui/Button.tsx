@@ -13,7 +13,7 @@ const buttonVariants = cva(
         outline: "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        glow: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_15px_rgba(var(--primary),0.5)]",
+        glow: "glow-effect bg-primary text-primary-foreground hover:bg-primary/90",
         glass: "bg-white/10 backdrop-blur-lg border border-white/10 text-white hover:bg-white/20 transition-all duration-300",
       },
       size: {

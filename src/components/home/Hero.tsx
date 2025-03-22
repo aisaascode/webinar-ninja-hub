@@ -5,22 +5,22 @@ import { Calendar, Users, Video } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden bg-hero-pattern">
+    <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-primary/10 blur-[120px]" />
-        <div className="absolute -bottom-[20%] -right-[10%] w-[40%] h-[40%] rounded-full bg-primary/5 blur-[100px]" />
+        <div className="orb w-[500px] h-[500px] -top-[10%] -left-[5%] opacity-30" />
+        <div className="orb w-[400px] h-[400px] -bottom-[10%] -right-[5%] opacity-20" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto animate-slide-up">
-          <div className="px-4 py-1.5 mb-6 bg-white/10 backdrop-blur-sm rounded-full border border-white/10">
+          <div className="px-4 py-1.5 mb-6 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
             <p className="text-sm font-medium">
               <span className="text-primary">New</span> — Introducing AI-powered webinar summaries
             </p>
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight mb-6 font-heading">
             Host Engaging Webinars With <span className="text-gradient">Style & Precision</span>
           </h1>
           
@@ -61,13 +61,13 @@ const Hero = () => {
             ].map((feature, index) => (
               <div 
                 key={index}
-                className="p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
+                className="neo-glass p-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="mb-4 p-3 rounded-full bg-primary/10">
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                  <h3 className="text-lg font-semibold mb-2 font-heading">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground">{feature.description}</p>
                 </div>
               </div>

@@ -46,15 +46,15 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-20 relative bg-gradient-to-b from-background to-secondary/20">
+    <section className="py-20 relative">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-primary/5 to-transparent opacity-50" />
+        <div className="absolute w-[800px] h-[800px] rounded-full bg-gradient-radial from-primary/10 to-transparent opacity-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-xl" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold mb-6">
-            Powerful Features for <span className="text-gradient">Professional Webinars</span>
+          <h2 className="text-3xl font-bold mb-6 font-heading">
+            Key Features of <span className="text-gradient">Tensai Webinar</span>
           </h2>
           <p className="text-muted-foreground">
             Everything you need to create, host, and manage successful webinars that engage your audience and deliver value.
@@ -65,13 +65,13 @@ const Features = () => {
           {featuresList.map((feature, index) => (
             <div 
               key={index}
-              className="p-6 bg-card rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
+              className="p-6 neo-glass rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:border-primary/30"
             >
               <div className="flex flex-col h-full">
                 <div className="p-3 mb-5 rounded-lg bg-secondary inline-flex w-fit">
                   <div className="text-primary">{feature.icon}</div>
                 </div>
-                <h3 className="text-lg font-semibold mb-3">{feature.title}</h3>
+                <h3 className="text-lg font-semibold mb-3 font-heading">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground">{feature.description}</p>
               </div>
             </div>

@@ -39,11 +39,15 @@ const speakers = [
 
 const Speakers = () => {
   return (
-    <section className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-background relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="orb w-[400px] h-[400px] top-1/2 right-[10%] opacity-20" />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div>
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-3xl font-bold mb-4 font-heading">
               Expert <span className="text-gradient">Speakers</span>
             </h2>
             <p className="text-muted-foreground max-w-lg">
@@ -69,7 +73,7 @@ const Speakers = () => {
 
 const SpeakerCard = ({ speaker }: { speaker: typeof speakers[number] }) => {
   return (
-    <div className="bg-card rounded-lg overflow-hidden border border-border/50 card-hover">
+    <div className="neo-glass rounded-lg overflow-hidden card-hover">
       <div className="h-60 overflow-hidden">
         <img 
           src={speaker.image} 
@@ -79,7 +83,7 @@ const SpeakerCard = ({ speaker }: { speaker: typeof speakers[number] }) => {
       </div>
       
       <div className="p-6">
-        <h3 className="text-lg font-semibold mb-1">
+        <h3 className="text-lg font-semibold mb-1 font-heading">
           {speaker.name}
         </h3>
         
